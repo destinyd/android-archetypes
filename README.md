@@ -1,14 +1,13 @@
 # android-archetypes
 使用Maven模板，快速生成Android项目。
 
-## Before starting
+## 准备工作
 
 ### JDK
 请安装最新版的JDK 7或更高版本,本人使用版本为7.u55。 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
-
 ### Android SDK
-以安装Android SDK的请跳过。
+已安装Android SDK的请跳过。
 
 请在[http://developer.android.com/sdk/index.html](http://developer.android.com/sdk/index.html) 下载最新版本的Android SDK，并按以下内容进行操作
 在Android SDK至少安装以下安装包 :
