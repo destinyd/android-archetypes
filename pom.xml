@@ -25,6 +25,25 @@
 		<module>android-library-project</module>
 	</modules>
 
+    <scm>
+        <url>http://github.com/destinyd/android-archetypes</url>
+        <connection>scm:git:git://github.com/destinyd/android-archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:destinyd/android-archetypes.git</developerConnection>
+        <tag>3.0.4</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Levi Chan</name>
+            <email>destinyd.war@gmail.com</email>
+            <id>destinyd</id>
+            <url>https://github.com/destinyd</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
 	<organization>
 		<name>DestinyD</name>
 		<url>https://github.com/destinyd</url>
