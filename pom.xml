@@ -13,7 +13,7 @@
 
 	<groupId>com.github.destinyd.android.archetypes</groupId>
 	<artifactId>android-archetypes</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Destinyd Android Archetypes</name>
