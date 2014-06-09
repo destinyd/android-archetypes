@@ -89,7 +89,7 @@ parent
 	mvn archetype:generate \
 		-DarchetypeArtifactId=android-library-project \
 		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
-		-DarchetypeVersion=0.0.3-SNAPSHOT \
+		-DarchetypeVersion=0.1.2-SNAPSHOT \
 		-DarchetypeCatalog=local \
 		-DarchetypeRepository=local \
 		-DgroupId=your.company \

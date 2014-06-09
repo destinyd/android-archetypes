@@ -30,7 +30,6 @@
             <!--<version>${platform.version}</version>-->
             <!--<scope>provided</scope>-->
         <!--</dependency>-->
-#if($Integer.parseInt(${minSdkVersion}) le 10)
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>support-v4</artifactId>
@@ -41,7 +40,6 @@
             <!--<artifactId>compatibility-v4</artifactId>-->
             <!--<version>${compatibility-v4.version}</version>-->
         <!--</dependency>-->
-#end
 
         <dependency>
             <groupId>${groupId}</groupId>
