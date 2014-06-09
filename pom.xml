@@ -10,7 +10,7 @@
 
         <groupId>com.github.destinyd.android.archetypes</groupId>
 	<artifactId>android-archetypes</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Destinyd Android Archetypes</name>
@@ -26,7 +26,7 @@
         <url>http://github.com/destinyd/android-archetypes</url>
         <connection>scm:git:git://github.com/destinyd/android-archetypes.git</connection>
         <developerConnection>scm:git:git@github.com:destinyd/android-archetypes.git</developerConnection>
-        <tag>android-archetypes-0.1.1</tag>
+        <tag>android-archetypes-0.0.1</tag>
     </scm>
 
     <developers>
