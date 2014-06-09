@@ -31,16 +31,16 @@
         <!--<scope>provided</scope>-->
         <!--</dependency>-->
 #if($Integer.parseInt(${minSdkVersion}) le 10)
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>support-v4</artifactId>
+            <version>${android-support.version}</version>
+        </dependency>
         <!--<dependency>-->
         <!--<groupId>android.support</groupId>-->
         <!--<artifactId>compatibility-v4</artifactId>-->
         <!--<version>${compatibility-v4.version}</version>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>support-v4</artifactId>
-            <version>r7</version>
-        </dependency>
 #end
     </dependencies>
 
@@ -58,61 +58,6 @@
                 <configuration>
                     <skip>true</skip>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-            <!--for eclipse?-->
-            <plugin>
-                <groupId>com.google.code.maven-replacer-plugin</groupId>
-                <artifactId>maven-replacer-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>process-sources</phase>
-                        <goals>
-                            <goal>replace</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <ignoreMissingFile>false</ignoreMissingFile>
-                    <file>target/generated-sources/r/com/actionbarsherlock/R.java</file>
-                    <outputFile>target/generated-sources/r/com/actionbarsherlock/R.java</outputFile>
-                    <regex>false</regex>
-                    <token>static final int</token>
-                    <value>static int</value>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>attach-artifact</goal>
-                        </goals>
-                        <configuration>
-                            <artifacts>
-                                <artifact>
-                                    <type>jar</type>
-                                    <file>${project.build.directory}/${project.build.finalName}.jar</file>
-                                </artifact>
-                                <!--<artifact>-->
-                                    <!--<type>aar</type>-->
-                                    <!--<file>${project.basedir}/build/libs/${project.artifactId}-${gradle.version}.aar-->
-                                    <!--</file>-->
-                                <!--</artifact>-->
-                            </artifacts>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
 
