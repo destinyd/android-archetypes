@@ -89,7 +89,7 @@ parent
 	mvn archetype:generate \
 		-DarchetypeArtifactId=android-library-project \
 		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
-		-DarchetypeVersion=0.0.1 \
+		-DarchetypeVersion=0.0.3-SNAPSHOT \
 		-DarchetypeCatalog=local \
 		-DarchetypeRepository=local \
 		-DgroupId=your.company \
@@ -98,15 +98,15 @@ parent
 		-Dversion=0.1 \
 		-DinteractiveMode=false
 
-where properties :
+你必须定义以下属性 :
 
-* `-DgroupId` : your Maven project groupId
-* `-DartifactId` : the name of your Maven project
-* `-Dversion` : the first version number of your Maven project
+* `-DgroupId` : 你Maven项目的groupId，用于其他项目引用
+* `-DartifactId` : 你Maven项目的名称，用于其他项目引用
+* `-Dversion` : 你Maven项目的版本，用于其他项目引用
 
-You can define three optional properties :
+你还需要定义以下可选属性 :
 
-* `-Dpackage` : define the package used by the library (default : the given `groupId`)
+* `-Dpackage` : 定义library的package (默认为 : 之前设置的`groupId`)
 * `-DminSdkVersion` : the minimum API Level required for the library (default : 10, Android 2.3.3)
 * `-DtargetSdkVersion` : the targeted Android platform version to use (default : 19, Android 4.4)
 
