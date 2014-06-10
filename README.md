@@ -1,6 +1,35 @@
 # android-archetypes
 使用Maven模板，快速生成Android项目。
 
+## 项目生成指令
+	mvn archetype:generate \
+		-DarchetypeArtifactId=android-library-project \
+		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
+		-DarchetypeVersion=0.2.0 \
+		-DgroupId=your.company \
+		-DartifactId=my-android-library-project \
+		-Dpackage=your.company.mylib \
+		-Dversion=0.1 \
+		-DinteractiveMode=false
+
+你必须定义以下属性 :
+
+* `-DgroupId` : 你Maven项目的groupId，用于其他项目引用
+* `-DartifactId` : 你Maven项目的名称，用于其他项目引用
+* `-Dversion` : 你Maven项目的版本，用于其他项目引用
+
+你还需要定义以下可选属性 :
+
+* `-Dpackage` : 定义library的package (默认为 : 之前设置的`groupId`)
+* `-DminSdkVersion` : the minimum API Level required for the library (default : 10, Android 2.3.3)
+* `-DtargetSdkVersion` : the targeted Android platform version to use (default : 19, Android 4.4)
+
+File ->
+Open ->
+生成项目目录/pom.xml ->
+完成后会出现基本的项目框架
+
+
 ## 准备工作
 
 ### JDK
@@ -68,7 +97,7 @@ where options :
 	cd extras/compatibility-v4/
 	mvn clean install
 
-## 安装
+## 安装SNAPSHOT版本
 使用Maven安装archetypes至你的Maven本地库:
 
 	git clone https://github.com/destinyd/android-archetypes.git
@@ -89,7 +118,7 @@ parent
 	mvn archetype:generate \
 		-DarchetypeArtifactId=android-library-project \
 		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
-		-DarchetypeVersion=0.1.2-SNAPSHOT \
+		-DarchetypeVersion=0.2.1-SNAPSHOT \
 		-DarchetypeCatalog=local \
 		-DarchetypeRepository=local \
 		-DgroupId=your.company \
