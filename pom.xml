@@ -116,7 +116,8 @@
                             <configuration>
                                 <useReleaseProfile>true</useReleaseProfile>
                                 <goals>deploy</goals>
-                                <arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>
+                                <!--<arguments>-Dgpg.passphrase=${gpg.passphrase}</arguments>-->
+                                <arguments>-DskipTests -Dinvoker.skip=true</arguments>
                             </configuration>
                         </plugin>
 
