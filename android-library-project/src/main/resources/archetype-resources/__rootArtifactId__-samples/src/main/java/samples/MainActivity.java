@@ -1,13 +1,12 @@
-package ${package}.ui;
+package ${package}.samples;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.Menu;
 
-import ${package}.BuildConfig;
-import ${package}.R;
-import ${package}.Resources;
+import ${package}.samples.BuildConfig;
+import ${package}.samples.R;
 
 public class MainActivity extends Activity
 {
@@ -17,11 +16,11 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		if (BuildConfig.DEBUG)
-		{
-			Log.d(getClass().getName(), "onCreate");
-			Log.d(getClass().getName(), "using library '" + Resources.getLibraryName(this) + "', version " + Resources.getLibraryVersion(this));
-		}
+//		if (BuildConfig.DEBUG)
+//		{
+//			Log.d(getClass().getName(), "onCreate");
+//			Log.d(getClass().getName(), "using library '" + Resources.getLibraryName(this) + "', version " + Resources.getLibraryVersion(this));
+//		}
 	}
 
 	@Override
