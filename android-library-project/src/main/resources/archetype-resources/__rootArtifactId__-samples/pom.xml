@@ -50,6 +50,8 @@
     </dependencies>
 
     <build>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>

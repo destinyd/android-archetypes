@@ -20,7 +20,7 @@
                         filtered="true"
                         packaged="true"
                         encoding="UTF-8">
-                    <directory>src/main/java</directory>
+                    <directory>src</directory>
                     <includes>
                         <include>**/*.java</include>
                     </includes>
@@ -29,7 +29,7 @@
                         filtered="true"
                         packaged="true"
                         encoding="UTF-8">
-                    <directory>src/test/java</directory>
+                    <directory>test</directory>
                     <includes>
                         <include>**/*.java</include>
                     </includes>
@@ -76,7 +76,7 @@
 					filtered="true"
 					packaged="true"
 					encoding="UTF-8">
-					<directory>src/main/java</directory>
+					<directory>src</directory>
 					<includes>
 						<include>**/*.java</include>
 					</includes>
@@ -85,7 +85,7 @@
 					filtered="true"
 					packaged="true"
 					encoding="UTF-8">
-					<directory>src/test/java</directory>
+					<directory>test</directory>
 					<includes>
 						<include>**/*.java</include>
 					</includes>
