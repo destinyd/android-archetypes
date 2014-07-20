@@ -2,31 +2,64 @@
 使用Maven模板，快速生成Android项目。
 
 ## 项目生成指令
-	mvn archetype:generate \
-		-DarchetypeArtifactId=android-library-project \
-		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
-		-DarchetypeVersion=0.2.1 \
-		-DgroupId=your.company \
-		-DartifactId=my-android-library-project \
-		-Dpackage=your.company.mylib \
-		-Dversion=0.1 \
-		-DinteractiveMode=false
+### android-quickstart 单个apk快速生成
+```
+mvn archetype:generate \
+	-DarchetypeArtifactId=android-quickstart \
+	-DarchetypeGroupId=com.github.destinyd.android.archetypes \
+	-DarchetypeVersion=0.3.0 \
+	-DgroupId=your.company \
+	-DartifactId=my-android-library-project \
+	-Dpackage=your.company.mylib \
+	-Dversion=0.1 \
+	-DinteractiveMode=false
+```
 
-你必须定义以下属性 :
+### android-apk-project apk项目快速生成
+```
+mvn archetype:generate \
+	-DarchetypeArtifactId=android-apk-project \
+	-DarchetypeGroupId=com.github.destinyd.android.archetypes \
+	-DarchetypeVersion=0.3.0 \
+	-DgroupId=your.company \
+	-DartifactId=my-android-library-project \
+	-Dpackage=your.company.mylib \
+	-Dversion=0.1 \
+	-DinteractiveMode=false
+```
+
+### android-library-project library+samples项目快速生成
+```
+mvn archetype:generate \
+	-DarchetypeArtifactId=android-library-project \
+	-DarchetypeGroupId=com.github.destinyd.android.archetypes \
+	-DarchetypeVersion=0.3.0 \
+	-DgroupId=your.company \
+	-DartifactId=my-android-library-project \
+	-Dpackage=your.company.mylib \
+	-Dversion=0.1 \
+	-DinteractiveMode=false
+```
+
+### 你必须定义以下属性 :
 
 * `-DgroupId` : 你Maven项目的groupId，用于其他项目引用
 * `-DartifactId` : 你Maven项目的名称，用于其他项目引用
 * `-Dversion` : 你Maven项目的版本，用于其他项目引用
 
-你还需要定义以下可选属性 :
+### 你还需要定义以下可选属性 :
 
 * `-Dpackage` : 定义library的package (默认为 : 之前设置的`groupId`)
-* `-DminSdkVersion` : the minimum API Level required for the library (default : 10, Android 2.3.3)
-* `-DtargetSdkVersion` : the targeted Android platform version to use (default : 19, Android 4.4)
+* `-DminSdkVersion` : the minimum API Level required for the library (default : 8, Android 2.2)
+* `-DtargetSdkVersion` : the targeted Android platform version to use (default : 20, Android L)
 
+### 打开项目
 File ->
+
 Open ->
+
 生成项目目录/pom.xml ->
+
 完成后会出现基本的项目框架
 
 
@@ -48,33 +81,35 @@ Open ->
 
 Or from the command line (headless environment) :
 
-	android update sdk --no-ui --all --filter \
-		tools,\
-		platform-tools,\
-		build-tools-19.0.1
+```
+android update sdk --no-ui --all --filter \
+        tools,\
+        platform-tools,\
+        build-tools-19.0.1
 
-	android update sdk --no-ui --all --filter \
-		extra-android-m2repository,\
-		extra-android-support,\
-		extra-google-admob_ads_sdk,\
-		extra-google-analytics_sdk_v2,\
-		extra-google-google_play_services_froyo,\
-		extra-google-google_play_services,\
-		extra-google-m2repository,\
-		extra-google-play_apk_expansion,\
-		extra-google-play_billing,\
-		extra-google-play_licensing,\
-		extra-google-webdriver
+android update sdk --no-ui --all --filter \
+        extra-android-m2repository,\
+        extra-android-support,\
+        extra-google-admob_ads_sdk,\
+        extra-google-analytics_sdk_v2,\
+        extra-google-google_play_services_froyo,\
+        extra-google-google_play_services,\
+        extra-google-m2repository,\
+        extra-google-play_apk_expansion,\
+        extra-google-play_billing,\
+        extra-google-play_licensing,\
+        extra-google-webdriver
 
-	android update sdk --no-ui --all --filter \
-		android-19,\
-		sysimg-19,\
-		addon-google_apis-google-19
+android update sdk --no-ui --all --filter \
+        android-19,\
+        sysimg-19,\
+        addon-google_apis-google-19
 
-	android update sdk --no-ui --all --filter \
-		android-10,\
-		sysimg-10,\
-		addon-google_apis-google-10
+android update sdk --no-ui --all --filter \
+        android-10,\
+        sysimg-10,\
+        addon-google_apis-google-10
+```
 
 where options :
 
@@ -90,19 +125,23 @@ where options :
 如果要使用本机上的Android SDK
 请查看，并按其说明安装，[Maven Android SDK Deployer](https://github.com/mosabua/maven-android-sdk-deployer) :
 
-	git clone https://github.com/mosabua/maven-android-sdk-deployer.git
-	cd maven-android-sdk-deployer/
-	mvn install -P 2.3.3
-	mvn install -P 4.4
-	cd extras/compatibility-v4/
-	mvn clean install
+```
+git clone https://github.com/mosabua/maven-android-sdk-deployer.git
+cd maven-android-sdk-deployer/
+mvn install -P 2.3.3
+mvn install -P 4.4
+cd extras/compatibility-v4/
+mvn clean install
+```
 
 ## 安装SNAPSHOT版本
 使用Maven安装archetypes至你的Maven本地库:
 
-	git clone https://github.com/destinyd/android-archetypes.git
-	cd android-archetypes/
-	mvn clean install
+```
+git clone https://github.com/destinyd/android-archetypes.git
+cd android-archetypes/
+mvn clean install
+```
 
 ## android-library-project archetype
 本archetype包含了最常见的apklib项目模板，形式如下
@@ -113,27 +152,29 @@ parent
 ```
 生成library，samples自动依赖library。
 
-###快速生成library项目命令行指令:
+### 快速生成library项目命令行指令:
 
-	mvn archetype:generate \
-		-DarchetypeArtifactId=android-library-project \
-		-DarchetypeGroupId=com.github.destinyd.android.archetypes \
-		-DarchetypeVersion=0.2.2-SNAPSHOT \
-		-DarchetypeCatalog=local \
-		-DarchetypeRepository=local \
-		-DgroupId=your.company \
-		-DartifactId=my-android-library-project \
-		-Dpackage=your.company.mylib \
-		-Dversion=0.1 \
-		-DinteractiveMode=false
+```
+mvn archetype:generate \
+        -DarchetypeArtifactId=android-library-project \
+        -DarchetypeGroupId=com.github.destinyd.android.archetypes \
+        -DarchetypeVersion=0.3.0 \
+        -DarchetypeCatalog=local \
+        -DarchetypeRepository=local \
+        -DgroupId=your.company \
+        -DartifactId=my-android-library-project \
+        -Dpackage=your.company.mylib \
+        -Dversion=0.1 \
+        -DinteractiveMode=false
+```
 
-你必须定义以下属性 :
+#### 你必须定义以下属性 :
 
 * `-DgroupId` : 你Maven项目的groupId，用于其他项目引用
 * `-DartifactId` : 你Maven项目的名称，用于其他项目引用
 * `-Dversion` : 你Maven项目的版本，用于其他项目引用
 
-你还需要定义以下可选属性 :
+#### 你还需要定义以下可选属性 :
 
 * `-Dpackage` : 定义library的package (默认为 : 之前设置的`groupId`)
 * `-DminSdkVersion` : the minimum API Level required for the library (default : 10, Android 2.3.3)
@@ -195,33 +236,35 @@ From Android SDK, install at least the following packages :
 
 Or from the command line (headless environment) :
 
-	android update sdk --no-ui --all --filter \
-		tools,\
-		platform-tools,\
-		build-tools-19.0.1
+```
+android update sdk --no-ui --all --filter \
+        tools,\
+        platform-tools,\
+        build-tools-19.0.1
 
-	android update sdk --no-ui --all --filter \
-		extra-android-m2repository,\
-		extra-android-support,\
-		extra-google-admob_ads_sdk,\
-		extra-google-analytics_sdk_v2,\
-		extra-google-google_play_services_froyo,\
-		extra-google-google_play_services,\
-		extra-google-m2repository,\
-		extra-google-play_apk_expansion,\
-		extra-google-play_billing,\
-		extra-google-play_licensing,\
-		extra-google-webdriver
+android update sdk --no-ui --all --filter \
+        extra-android-m2repository,\
+        extra-android-support,\
+        extra-google-admob_ads_sdk,\
+        extra-google-analytics_sdk_v2,\
+        extra-google-google_play_services_froyo,\
+        extra-google-google_play_services,\
+        extra-google-m2repository,\
+        extra-google-play_apk_expansion,\
+        extra-google-play_billing,\
+        extra-google-play_licensing,\
+        extra-google-webdriver
 
-	android update sdk --no-ui --all --filter \
-		android-19,\
-		sysimg-19,\
-		addon-google_apis-google-19
+android update sdk --no-ui --all --filter \
+        android-19,\
+        sysimg-19,\
+        addon-google_apis-google-19
 
-	android update sdk --no-ui --all --filter \
-		android-10,\
-		sysimg-10,\
-		addon-google_apis-google-10
+android update sdk --no-ui --all --filter \
+        android-10,\
+        sysimg-10,\
+        addon-google_apis-google-10
+```
 
 where options :
 
