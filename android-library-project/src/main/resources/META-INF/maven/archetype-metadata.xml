@@ -13,6 +13,17 @@
 		</requiredProperty>
 	</requiredProperties>
 
+    <fileSets>
+        <fileSet
+                filtered="true"
+                encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
 	<modules>
         <module id="${rootArtifactId}" dir="__rootArtifactId__" name="${rootArtifactId}">
             <fileSets>
