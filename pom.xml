@@ -20,6 +20,8 @@
 
 	<modules>
 		<module>android-library-project</module>
+        <module>android-quickstart</module>
+        <module>android-apk-project</module>
 	</modules>
 
     <scm>
