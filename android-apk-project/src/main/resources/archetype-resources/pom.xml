@@ -11,7 +11,7 @@
 	<name>${artifactId} - Parent</name>
 
 	<modules>
-		<module>${rootArtifactId}-samples</module>
+		<module>app</module>
 	</modules>
 
     <properties>

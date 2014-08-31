@@ -12,9 +12,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>${artifactId}</artifactId>
+    <artifactId>app</artifactId>
     <packaging>apk</packaging>
-    <name>${artifactId} - Samples</name>
+    <name>${artifactId} - App</name>
 
     <dependencies>
 

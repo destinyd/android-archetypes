@@ -25,7 +25,7 @@
     </fileSets>
 
 	<modules>
-		<module id="${rootArtifactId}-samples" dir="__rootArtifactId__-samples" name="${rootArtifactId}-samples">
+		<module id="app" dir="app" name="app">
 			<fileSets>
 				<fileSet
 					filtered="true"
